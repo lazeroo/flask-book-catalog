@@ -19,7 +19,7 @@ def register_user():
             password=form.password.data
         )
         flash('Registration Successful')
-        return redirect(url_for('authentication.login_user'))
+        return redirect(url_for('authentication.do_the_login'))
     return render_template('registration.html', form=form)
 
 @at.route('/login', methods=['GET', 'POST'])
